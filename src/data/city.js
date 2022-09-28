@@ -1,4 +1,4 @@
-export const cityCodes = [
+export const cityUrls = [
     {'uf':'AC','city':'Rio Branco','url':'https://api.hgbrasil.com/weather?woeid=457938'},
     {'uf':'AL','city':'Maceio','url':'https://api.hgbrasil.com/weather?woeid=455880'},
     {'uf':'AP','city':'Macapa','url':'https://api.hgbrasil.com/weather?woeid=455970'},
