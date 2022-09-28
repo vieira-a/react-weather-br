@@ -23,19 +23,16 @@ import { cityUrls } from './data/city'
 
 
 function App() {
-  
-  //PROTOTYPE
-  
-  const url = 'https://api.hgbrasil.com/weather?woeid=455826&format=json-cors&key=d09c56dc'
 
+  //PROTOTYPE: MORE THAN 1 CITY
   let database = []
-  async function getForecast() {
-    
-    const response = await fetch(url) 
+  const urls = ['https://api.hgbrasil.com/weather?woeid=455826&format=json-cors&key=d09c56dc','https://api.hgbrasil.com/weather?woeid=455830&format=json-cors&key=d09c56dc']
+  
+  urls.map((url)=>(
 
-    let data = await response.json()
-
-    database.push({
+    fetch(url)
+    .then(res => res.json())
+    .then(data => database.push({
       city: data.results.city,
       temp: data.results.temp, 
       condition: data.results.forecast[0].description,
@@ -45,12 +42,36 @@ function App() {
       wind: data.results.wind_speedy,
       humidity: data.results.humidity
     })
-
+    )))
     console.log(database)
-          
-  } 
+    
+  //PROTOTYPE: 1 CITY - OK
+  
+  // const url = 'https://api.hgbrasil.com/weather?woeid=455826&format=json-cors&key=d09c56dc'
 
-  getForecast()
+  // let database = []
+  // async function getForecast() {
+    
+  //   const response = await fetch(url) 
+
+  //   let data = await response.json()
+
+  //   database.push({
+      // city: data.results.city,
+      // temp: data.results.temp, 
+      // condition: data.results.forecast[0].description,
+      // max: data.results.forecast[0].max,
+      // min: data.results.forecast[0].min,
+      // term: data.results.temp,
+      // wind: data.results.wind_speedy,
+      // humidity: data.results.humidity
+  //   })
+
+  //   console.log(database)
+
+  // } 
+
+//  getForecast()
 
   return (
     <div className="App">
