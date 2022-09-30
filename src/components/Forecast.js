@@ -1,12 +1,6 @@
-import '../index.css'
+import './Forecast.css'
 
-const Forecast = ( {database} ) => {
-
-  console.log(database)
-  
-  // database.map((data, index)=>(
-  //   console.log(index)
-  // ))
+const Forecast = ( {database, handleClick} ) => {
   
   return (
     
@@ -24,20 +18,16 @@ const Forecast = ( {database} ) => {
             <th>Min</th>
             <th>Max</th>
           </tr>
-
-        {database.map((data, index)=>(
-          <tr key={index}>
+        {database.map((data, index)=>(     
+          <tr key={index} onClick={handleClick} id={index}>
             <td>{`${data.min}°`}</td>
             <td>{`${data.max}°`}</td>
             <td>{data.city}</td>
           </tr>
       ))}
-
           </tbody>
         </table>
       </div>
-
-
     </div>
     
   )

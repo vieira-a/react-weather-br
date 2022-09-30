@@ -1,0 +1,57 @@
+
+input {
+    width: 80%;
+    padding: 1rem;
+}
+
+input, button {
+    border: 0;
+    font: inherit;
+}
+
+button {
+    text-align: center;
+}
+
+h1 {
+    padding-top: 2rem;
+}
+
+.dataForecast {
+    margin-inline: auto;
+    text-align: center;
+}
+
+.searchBar {
+    display: flex;
+    margin-inline: auto;
+    width: 50%;
+    padding-block: 2rem;
+    border-bottom: 1px solid wheat;
+}
+
+.searchBar svg {
+    width: 50%;
+    text-align: center;
+}
+
+.dataTable {
+    width: 50%;
+    margin-inline: auto;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+table {
+    font-size: .8rem;
+}
+
+table th {
+    opacity: .5;
+}
+
+table tr {
+
+    color: black;
+    font-weight: bold;
+}

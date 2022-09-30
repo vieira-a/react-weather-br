@@ -9,15 +9,29 @@ import { cityUrls } from './data/city'
 
 //Components
 import Forecast from'./components/Forecast'
+import ForecastDetails from'./components/ForecastDetails'
 
-//Getting all urls
+//Create link pages
+
+const pages = [
+  {id: 0, name: 'main'},
+  {id: 1, name: 'details'}
+]
+
+
 
 function App() {
   
+  const [page, setPage] = useState(pages[0].name)
+
   let [baseUrls, setBaseUrls] = useState([])
   let [database, setDatabase] = useState([])
+  let [databaseId, setDatabaseId] = useState()
 
-
+  const handleClick = event => {
+    setDatabaseId(event.currentTarget.id)
+    setPage(pages[1].name)
+  };
 
   cityUrls.map((urls)=>(
     baseUrls.push(urls.url)  
@@ -41,7 +55,8 @@ function App() {
 
   return (
     <>
-      <Forecast database={database}/>
+    {page === 'main' && <Forecast database={database} handleClick={handleClick} />}
+    {page === 'details' && <ForecastDetails database={database} databaseId={databaseId} />}
     </>
   );
 }
