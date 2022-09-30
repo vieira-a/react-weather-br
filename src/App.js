@@ -7,11 +7,16 @@ import './App.css';
 //Data
 import { cityUrls } from './data/city'
 
+//Components
+import Forecast from'./components/Forecast'
+
 //Getting all urls
-// cityUrls.map((urls)=>(
+let baseUrls = []
+cityUrls.map((urls)=>(
+  baseUrls.push(urls.url)
   
-//   console.log([urls.url])
-// ))
+  ))
+  console.log(baseUrls)
 
 // const getInitialCities = () =>{
 //   const indexCities = Object.keys(cityUrls)
@@ -26,9 +31,9 @@ function App() {
 
   //PROTOTYPE: MORE THAN 1 CITY
   let database = []
-  const urls = ['https://api.hgbrasil.com/weather?woeid=455826&format=json-cors&key=d09c56dc','https://api.hgbrasil.com/weather?woeid=455830&format=json-cors&key=d09c56dc']
+  //const urls = ['https://api.hgbrasil.com/weather?woeid=455826&format=json-cors&key=d09c56dc','https://api.hgbrasil.com/weather?woeid=455830&format=json-cors&key=d09c56dc']
   
-  urls.map((url)=>(
+  baseUrls.map((url)=>(
 
     fetch(url)
     .then(res => res.json())
@@ -74,10 +79,9 @@ function App() {
 //  getForecast()
 
   return (
-    <div className="App">
-      <h1>Previsão do tempo</h1>
-      
-    </div>
+    <>
+      <Forecast database={database}/>
+    </>
   );
 }
 
