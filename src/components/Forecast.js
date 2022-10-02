@@ -1,5 +1,6 @@
 import './Forecast.css'
 
+
 const Forecast = ( {database, handleClick} ) => {
   
   return (
@@ -28,7 +29,6 @@ const Forecast = ( {database, handleClick} ) => {
         </table>
       </div>
     </div>
-    
   )
 }
 

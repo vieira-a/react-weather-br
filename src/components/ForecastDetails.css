@@ -1,9 +1,9 @@
 .dataForecastDetails {
-    width: 50%;
+    width: 65%;
     margin-inline: auto;
     padding: 1rem 2rem;
     background-color: #fef3e3;
-    font-size: .7rem;
+    font-size: 10px;
     color: #515151;
 }
 
@@ -30,4 +30,21 @@
 
 span {
     font-weight: bold;
+}
+
+.forecastNextDays {
+    margin-top: .5rem;
+    padding-top: .5rem;
+    border-top: 1px solid rgb(251, 157, 28);
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.forecastNextDays span {
+    color: rgb(251, 157, 28);
+}
+
+.next {
+    text-align: center;
 }
