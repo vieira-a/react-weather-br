@@ -10,6 +10,7 @@ import { cityUrls } from './data/city'
 //Components
 import Forecast from'./components/Forecast'
 import ForecastDetails from'./components/ForecastDetails'
+import Header from './components/Header';
 
 //Create link pages
 
@@ -37,24 +38,31 @@ function App() {
     baseUrls.push(urls.url)  
   ))
 
-  baseUrls.map((url)=>(
+  const getData = () => {
+    
+    baseUrls.map((url)=>(
+  
+      fetch(url)
+      .then(res => res.json())
+      .then(data => database.push({
+        city: data.results.city,
+        temp: data.results.temp, 
+        condition: data.results.forecast[0].description,
+        max: data.results.forecast[0].max,
+        min: data.results.forecast[0].min,
+        term: data.results.temp,
+        wind: data.results.wind_speedy,
+        humidity: data.results.humidity
+      })
+      )))
 
-    fetch(url)
-    .then(res => res.json())
-    .then(data => database.push({
-      city: data.results.city,
-      temp: data.results.temp, 
-      condition: data.results.forecast[0].description,
-      max: data.results.forecast[0].max,
-      min: data.results.forecast[0].min,
-      term: data.results.temp,
-      wind: data.results.wind_speedy,
-      humidity: data.results.humidity
-    })
-    )))
+  }
+
+  getData()
 
   return (
     <>
+    <Header/>
     {page === 'main' && <Forecast database={database} handleClick={handleClick} />}
     {page === 'details' && <ForecastDetails database={database} databaseId={databaseId} />}
     </>

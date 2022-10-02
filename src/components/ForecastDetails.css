@@ -1,0 +1,33 @@
+.dataForecastDetails {
+    width: 50%;
+    margin-inline: auto;
+    padding: 1rem 2rem;
+    background-color: #fef3e3;
+    font-size: .7rem;
+    color: #515151;
+}
+
+.dataForecastDetails .header {
+    font-weight: bold;
+}
+
+.dataForecastDetails .header h2 {
+    font-size: 1.8rem;
+}
+
+.thermic {
+    display: grid;
+    grid-template-areas: 
+    'A B'
+    'C D';
+}
+
+.temperature {
+    display: flex;
+    gap: .5rem;
+    font-weight: bold;
+}
+
+span {
+    font-weight: bold;
+}
