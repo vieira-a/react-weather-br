@@ -1,9 +1,8 @@
+//Styles
+import styles from'../styles/components/ForecastDetails.module.sass'
+
 //Icons
 import { IoCloseOutline, IoArrowDownOutline, IoArrowUpOutline } from "react-icons/io5";
-
-import Forecast from "./Forecast";
-
-import './ForecastDetails.css'
 
 const ForecastDetails = ({database, databaseId, pages, setPage}) => {
   
@@ -18,45 +17,40 @@ const ForecastDetails = ({database, databaseId, pages, setPage}) => {
   return (
     <>
     
-    <div className="dataForecastDetails">  
+    <div className="container p-4 my-4">
       {databaseDetails.map((data, index)=>(
         <div className="forecastCard" key={index}>
-          <div className="header">
-            <p>{data.city} - Brasil</p>
-            <span className="btnClose" onClick={handleCloseDetails}><IoCloseOutline/></span>
+          <div className={styles.cardHeader}>
+            <div className={styles.city}>
+              {data.city} - Brasil  
+            </div>
+            <div className={styles.closeCard}>
+              <IoCloseOutline onClick={handleCloseDetails}/>
+            </div>
           </div>
             <h2>{data.temp}°C {data.forecast[0].condition}</h2>
-          <div className="thermic">
-            <div className="temperature">
-              <div className="minTemperature">
-                <span className="arrowIcon">
+          <div className={styles.thermic}>
+            <div className={styles.temperature}>
+              <div className={styles.minTemperature}>
                   <IoArrowDownOutline/>
-                </span>
-                <span>
                   {data.forecast[0].min}°
-                </span>
               </div>
-              <div className="maxTemperature">
-                <span className="arrowIcon">
+              <div className={styles.maxTemperature}>                
                   <IoArrowUpOutline/>
-                </span>
-                <span>
                   {data.forecast[0].max}°
-                </span>
               </div>
             </div>
 
-            <div className="sense">
-              <p>Sensação <span>{data.temp}°C</span></p>
+            <div className={styles.sense}>
+              <p>Sensação {data.temp}°C</p>
             </div>
-            <div className="wind">
-              <p>Vento <span>{data.wind}</span></p>
+            <div className={styles.wind}>
+              <p>Vento {data.wind}</p>
             </div>
-            <div className="humidity">
-              <p> Humidade <span>{data.humidity}%</span></p>
+            <div className={styles.humidity}>
+              <p> Humidade {data.humidity}%</p>
             </div>
           </div>
-
           <div className="forecastNextDays">
             <div className="next">
               <p>{data.forecast[1].weekday}</p>

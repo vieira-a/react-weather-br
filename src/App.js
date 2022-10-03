@@ -1,16 +1,15 @@
 //Hooks
 import React, { useState } from 'react'
 
-//CSS
-import './App.css';
+//Styles
+import '../src/styles/main.sass'
 
 //Data
 import { cityUrls } from './data/city'
 
 //Components
+import ForecastHeader from './components/ForecastHeader';
 import Forecast from'./components/Forecast'
-//import ForecastDetails from'./components/ForecastDetails'
-import Header from './components/Header';
 
 function App() {
   
@@ -89,7 +88,7 @@ function App() {
   
   return (
     <>
-    <Header/>
+    <ForecastHeader/>
     <Forecast database={database} />
     </>
   );

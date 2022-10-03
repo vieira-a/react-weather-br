@@ -1,0 +1,38 @@
+@use '../variables'
+@use '../mixins'
+
+.cardHeader
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .closeCard
+        font-size: 1.8rem
+
+.thermic 
+    display: grid
+    align-items: center
+    grid-template-areas: 'a b' 
+
+
+    
+.temperature
+    border: 1px solid #fff
+    display: flex
+    gap: .5rem
+    grid-area: 'a'
+
+.sense
+    border: 1px solid #fff
+    
+    grid-area: 'b'
+
+.wind
+    border: 1px solid #fff
+    
+    grid-area: 'c'
+
+.humidity
+    border: 1px solid #fff
+    
+    grid-area: 'd'
