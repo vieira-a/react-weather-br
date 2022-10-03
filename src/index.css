@@ -9,6 +9,10 @@
 body {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(180deg, rgb(251, 157, 28) 70%, rgb(251, 201, 112) 100%);
+    background: linear-gradient(180deg, rgb(251, 157, 28) 100%, rgb(251, 201, 112) 100%);
     color: white;
+}
+
+h2 {
+    font-size: 1.8rem;
 }

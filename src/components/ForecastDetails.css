@@ -5,10 +5,23 @@
     background-color: #fef3e3;
     font-size: 10px;
     color: #515151;
+    text-align: left;
 }
 
 .dataForecastDetails .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-weight: bold;
+}
+
+.btnClose {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btnClose:hover {
+    color: rgb(251, 157, 28);
 }
 
 .dataForecastDetails .header h2 {
@@ -26,6 +39,18 @@
     display: flex;
     gap: .5rem;
     font-weight: bold;
+}
+
+.minTemperature, .maxTemperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrowIcon {
+    display: flex;
+    font-size: 1rem;
+    color: rgb(251, 157, 28);
 }
 
 span {

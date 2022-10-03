@@ -1,12 +1,13 @@
 
 input {
-    width: 80%;
+    width: 100%;
     padding: 1rem;
 }
 
 input, button {
     border: 0;
     font: inherit;
+    cursor: pointer;
 }
 
 button {
@@ -24,8 +25,9 @@ h1 {
 
 .searchBar {
     display: flex;
+    justify-content: space-between;
     margin-inline: auto;
-    width: 50%;
+    width: 65%;
     padding-block: 2rem;
     border-bottom: 1px solid wheat;
 }
@@ -51,7 +53,7 @@ table th {
 }
 
 table tr {
-
     color: black;
     font-weight: bold;
+    cursor: pointer;
 }
