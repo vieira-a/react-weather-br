@@ -1,38 +1,64 @@
 @use '../variables'
 @use '../mixins'
 
+.forecastCard
+    @include mixins.border-section
+    padding-inline: 1rem
+    
 .cardHeader
+    margin-block: 1rem
     display: flex
     justify-content: space-between
     align-items: center
+    color: variables.$ff-color-celeste
+    font-weight: bold
 
     .closeCard
         font-size: 1.8rem
 
 .thermic 
     display: grid
+    margin-block: 1rem
     align-items: center
     grid-template-areas: 'a b' 
 
+.data
+    font-weight: bold
+    color: variables.$ff-color-celeste
 
-    
 .temperature
-    border: 1px solid #fff
     display: flex
     gap: .5rem
     grid-area: 'a'
 
-.sense
-    border: 1px solid #fff
+.arrowTemp
+    font-size: 1.2rem
     
+.temperature,
+.sense,
+.wind,
+.humidity
+    display: flex
+    gap: .5rem
+
+.sense
     grid-area: 'b'
 
-.wind
-    border: 1px solid #fff
-    
+.wind    
     grid-area: 'c'
 
 .humidity
-    border: 1px solid #fff
-    
     grid-area: 'd'
+
+.forecastNextDays
+    display: flex
+    text-align: center
+    justify-content: space-between
+
+    span
+        font-size: .8rem
+
+.nextTemperatures
+    display: flex
+    gap: .3rem
+    padding-bottom: 2rem

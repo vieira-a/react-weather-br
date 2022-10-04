@@ -50,7 +50,6 @@ const Forecast = ( {database} ) => {
           </tbody>
         </table>
       </section>
-  
     </div>
   
     </>
