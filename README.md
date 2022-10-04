@@ -2,7 +2,7 @@
 ## About
 
 API weather forecast to brazilian capitals.
-This project is based on this [Front-end Challege](https://github.com/1STi/desafio-frontend/).
+This project is based on this [Front-end Challenge](https://github.com/1STi/desafio-frontend/).
 ## How it works
 
  The app queries address https://api.hgbrasil.com/weather using the city's code param. 
