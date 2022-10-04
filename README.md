@@ -2,6 +2,7 @@
 ## About
 
 API weather forecast to brazilian capitals.
+This project is based on this [Front-end Challege](https://github.com/1STi/desafio-frontend/).
 ## How it works
 
  The app queries address https://api.hgbrasil.com/weather using the city's code param. 
@@ -33,3 +34,11 @@ To facilitate maintenance, and better visualization of project progress.
 Eg:
 
 "ADD Content base Header"
+
+## What I improved with this project
+
+- Structural organization with semantical HTML;
+- External data organization;
+- JSON file manipulation to create a new database from captured data;
+- Control the component transitions without React Routes;
+- Improve the use of Saas.
