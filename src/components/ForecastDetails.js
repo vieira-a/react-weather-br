@@ -4,15 +4,13 @@ import styles from'../styles/components/ForecastDetails.module.sass'
 //Icons
 import { IoCloseOutline, IoArrowDownOutline, IoArrowUpOutline } from "react-icons/io5";
 
-const ForecastDetails = ({database, databaseId, pages, setPage}) => {
+const ForecastDetails = ({database, setDatabase, databaseId, pages, setPage}) => {
   
   const handleCloseDetails = event => {
     setPage(pages[0].name)
   }
 
   const databaseDetails = [database[databaseId]]
-
-  console.log(databaseDetails)
 
   return (
     <>

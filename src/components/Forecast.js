@@ -13,8 +13,8 @@ const pages = [
   {id: 1, name: 'details'}
 ]
 
-const Forecast = ( {database} ) => {
-  const [page, setPage] = useState(pages[0].name)
+const Forecast = ( {database, setDatabase} ) => {
+  const [page, setPage] = useState()
   let [databaseId, setDatabaseId] = useState()
   
   const handleClick = event => {
@@ -25,10 +25,10 @@ const Forecast = ( {database} ) => {
   const soonForecastSearch = () => {
     alert('Esta função será disponibilizada em breve.')
   }
-  
+
   return (
     <>
-    {page === 'details' && <ForecastDetails database={database} databaseId={databaseId} pages={pages} setPage={setPage} />}
+    {page === 'details' && <ForecastDetails database={database} setDatabase={setDatabase} databaseId={databaseId} pages={pages} setPage={setPage} />}
     <div className="container p-4 my-4">
       <section className="searchBar">
         <form onClick={soonForecastSearch}>
@@ -55,7 +55,6 @@ const Forecast = ( {database} ) => {
         </table>
       </section>
     </div>
-  
     </>
   )
 }
