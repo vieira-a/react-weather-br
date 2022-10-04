@@ -22,12 +22,16 @@ const Forecast = ( {database} ) => {
     setPage(pages[1].name)
   };
 
+  const soonForecastSearch = () => {
+    alert('Esta função será disponibilizada em breve.')
+  }
+  
   return (
     <>
     {page === 'details' && <ForecastDetails database={database} databaseId={databaseId} pages={pages} setPage={setPage} />}
     <div className="container p-4 my-4">
       <section className="searchBar">
-        <form>
+        <form onClick={soonForecastSearch}>
           <input type="search" name="city" placeholder="Insira aqui o nome da cidade"/>
           <button type="submit" name="search"><BiSearchAlt2/></button>
         </form>

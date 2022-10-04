@@ -17,7 +17,7 @@ const ForecastDetails = ({database, databaseId, pages, setPage}) => {
   return (
     <>
     
-    <div className="container p-2 my-2">
+    <div className="container p-3 my-3">
       {databaseDetails.map((data, index)=>(
         <div className={styles.forecastCard} key={index}>
           <div className={styles.cardHeader}>
@@ -102,9 +102,6 @@ const ForecastDetails = ({database, databaseId, pages, setPage}) => {
 
       ))}
     </div>
-
-    
-
     </>
     
   )
