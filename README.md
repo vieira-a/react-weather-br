@@ -6,6 +6,9 @@ API weather forecast to brazilian capitals.
 
  The app queries address https://api.hgbrasil.com/weather using the city's code param. 
  The API returns data JSON file with the weather forecast to informed cities.
+
+ You will see a list of Brazilian capitals, and you can select a city to view details about the weather forecast: current information and forecasts for the next 5 days. 
+ 
 ### Rules to normalize commit messages
 
 To facilitate maintenance, and better visualization of project progress.
